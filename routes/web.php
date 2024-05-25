@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormHandling;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[FormHandling::class,'index']);
+Route::post('/',[FormHandling::class,'store']);
