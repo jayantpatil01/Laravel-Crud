@@ -20,7 +20,11 @@ class FormHandling extends Controller
         $student->password = $req['password'];
         $student->gender = $req['gender'];
         $student->save();
-        return response()->json(['Message'=> 'Student Entry was suscefully Enterd'],201);
-
+        return redirect('view-students');
+    }
+    public function show(){
+        $students = Students::all();
+        $data = compact('students');
+        return view('Student-view')->with($data);	
     }
 }
