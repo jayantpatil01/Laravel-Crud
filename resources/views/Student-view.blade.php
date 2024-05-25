@@ -10,9 +10,9 @@
     <div class="container mt-5">
         <h1 class="text-center">Students List</h1>
         <a href="{{url('/')}}">
-    <button type="button" class="btn btn-warning">Register</button>
-    </a>
-        <table class="table table-striped table-success">
+            <button type="button" class="btn btn-warning">Register</button>
+        </a>
+        <table class="table table-dark table-striped table-hover">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
@@ -37,7 +37,10 @@
                     <td>{{$student->gender}}</td>
                     <td>
                         <a href="{{route('delete',['id' => $student->id])}}">
-                        <button type="button" class="btn btn-danger">Delete</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </a>
+                        <a href="{{route('edit',['id' => $student->id])}}">
+                            <button type="button" class="btn btn-success">Edit</button>
                         </a>
                     </td>
                 </tr>
