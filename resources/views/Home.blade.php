@@ -8,6 +8,9 @@
 </head>
 <body>
     <h1 class="text-center">Student-Management-System</h1>
+    <a href="{{url('/view-students')}}">
+    <button type="button" class="btn btn-info">View-Students</button>
+    </a>
     <div class="container mt-5">
     <form method="post" action="{{url('/')}}">
         @csrf

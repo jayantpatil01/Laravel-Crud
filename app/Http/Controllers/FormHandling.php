@@ -27,4 +27,8 @@ class FormHandling extends Controller
         $data = compact('students');
         return view('Student-view')->with($data);	
     }
+    public function delete($id){
+        $student = Students::find($id)->delete();
+        return redirect()->back();
+    }
 }
